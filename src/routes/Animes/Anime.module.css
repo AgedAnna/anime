@@ -1,0 +1,50 @@
+.container {
+  border: 2px solid transparent;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.loadingImage {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.buttonsContainer {
+  margin-top: 20px;
+  display: flex;
+  gap: 1rem;
+}
+
+.myButton {
+  transition: all 0.5s ease;
+}
+
+.myButton:hover {
+  background: linear-gradient(270deg, pink, blue, purple);
+  background-size: 400% 400%;
+  color: white;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.myButton[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  animation: none;
+}
